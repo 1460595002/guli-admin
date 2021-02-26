@@ -1,0 +1,110 @@
+  {
+    "serviceedu/teacher/teacherPage": [
+      {
+        "success": true,
+        "code": 20000,
+        "message": "操作成功",
+        "data": {
+          "total": 8,
+          "rows": [
+            {
+              "id": "1",
+              "name": "张三",
+              "intro": "近年主持国家",
+              "career": "高级",
+              "level": 1,
+              "avatar": "https://guli-file-190513.oss-cn-beijing.aliyuncs.com/avatar/default.jpg",
+              "sort": 0,
+              "isDeleted": false,
+              "gmtCreate": "2019-10-30 14:18:46",
+              "gmtModified": "2019-11-12 13:36:36"
+            },
+            {
+              "id": "1189426437876985857",
+              "name": "王二",
+              "intro": "高级讲师简介",
+              "career": "高级讲师",
+              "level": 1,
+              "avatar": "https://online-teach-file.oss-cn-beijing.aliyuncs.com/teacher/2019/11/08/e44a2e92-2421-4ea3-bb49-46f2ec96ef88.png",
+              "sort": 0,
+              "isDeleted": false,
+              "gmtCreate": "2019-10-30 14:18:56",
+              "gmtModified": "2019-11-12 13:37:35"
+            },
+            {
+              "id": "1189426464967995393",
+              "name": "王五",
+              "intro": "高级讲师简介",
+              "career": "高级讲师",
+              "level": 1,
+              "avatar": "https://online-teach-file.oss-cn-beijing.aliyuncs.com/teacher/2019/10/30/65423f14-49a9-4092-baf5-6d0ef9686a85.png",
+              "sort": 0,
+              "isDeleted": false,
+              "gmtCreate": "2019-10-30 14:19:02",
+              "gmtModified": "2019-11-12 13:37:18"
+            },
+            {
+              "id": "1192249914833055746",
+              "name": "李四",
+              "intro": "高级讲师简介",
+              "career": "高级讲师",
+              "level": 1,
+              "avatar": "https://online-teach-file.oss-cn-beijing.aliyuncs.com/teacher/2019/11/07/91871e25-fd83-4af6-845f-ea8d471d825d.png",
+              "sort": 0,
+              "isDeleted": false,
+              "gmtCreate": "2019-11-07 09:18:25",
+              "gmtModified": "2019-11-12 13:37:01"
+            },
+            {
+              "id": "645254354",
+              "name": "林俊杰",
+              "intro": "高级讲师简介",
+              "career": "歌手1",
+              "level": 0,
+              "avatar": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=980191122,3945962100&fm=26&gp=0.jpg",
+              "sort": 0,
+              "isDeleted": false,
+              "gmtCreate": "2019-11-07 14:26:37",
+              "gmtModified": "2019-11-07 14:26:37"
+            },
+            {
+              "id": "78685345345",
+              "name": "周杰伦",
+              "intro": "台湾歌手",
+              "career": "歌手",
+              "level": 0,
+              "avatar": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=980191122,3945962100&fm=26&gp=0.jpg",
+              "sort": 0,
+              "isDeleted": false,
+              "gmtCreate": "2019-11-07 14:26:37",
+              "gmtModified": "2019-11-07 14:26:37"
+            },
+            {
+              "id": "1189389726308478977",
+              "name": "晴天",
+              "intro": "高级讲师简介",
+              "career": "高级讲师资历",
+              "level": 2,
+              "avatar": "https://online-teach-file.oss-cn-beijing.aliyuncs.com/teacher/2019/10/30/de47ee9b-7fec-43c5-8173-13c5f7f689b2.png",
+              "sort": 1,
+              "isDeleted": false,
+              "gmtCreate": "2019-10-30 11:53:03",
+              "gmtModified": "2019-10-30 11:53:03"
+            },
+            {
+              "id": "1189390295668469762",
+              "name": "李刚",
+              "intro": "高级讲师简介",
+              "career": "高级讲师",
+              "level": 2,
+              "avatar": "https://online-teach-file.oss-cn-beijing.aliyuncs.com/teacher/2019/10/30/b8aa36a2-db50-4eca-a6e3-cc6e608355e0.png",
+              "sort": 2,
+              "isDeleted": false,
+              "gmtCreate": "2019-10-30 11:55:19",
+              "gmtModified": "2019-11-12 13:37:52"
+            }
+          ]
+        }
+      }
+    ]
+  }
