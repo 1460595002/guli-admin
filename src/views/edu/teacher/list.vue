@@ -16,8 +16,8 @@
           value-format="yyyy-MM-dd HH:mm:ss" default-time="00:00:00" />
       </el-form-item>
       <el-form-item>
-        <el-date-picker v-model="teacherQuer.end" type="datetime" placeholder="选择截止时间" value-format="yyyy-MM-dd HH:mm:ss"
-          default-time="00:00:00" />
+        <el-date-picker v-model="teacherQuer.end" type="datetime" placeholder="选择截止时间"
+          value-format="yyyy-MM-dd HH:mm:ss" default-time="00:00:00" />
       </el-form-item>
       <el-button type="primary" icon="el-icon-search" @click="getList()">查 询</el-button>
       <el-button type="default" @click="resetData()">清空</el-button>
@@ -41,7 +41,7 @@
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
           <router-link :to="'/edu/teacher/edit/'+scope.row.id">
-            <el-button type="primary" size="mini" icon="el-icon-edit">修改</el-button>
+            <el-button type="primary" size="mini" icon="el-icon-edit" >修改</el-button>
           </router-link>
           <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeDataById(scope.row.id)">删除
           </el-button>
@@ -96,12 +96,42 @@
       handleCurrentChange(val) {
         console.log(`当前页: ${val}`);
       }
-    ,
-    //清空方法
-    resetData(){  
-       this.teacherQuer={};
-       this.getList();
-    }
+      ,
+      //清空方法
+      resetData() {
+        this.teacherQuer = {};
+        this.getList();
+      },
+      //根据id删除
+      removeDataById(id) {
+        // debugger
+        // console.log(memberId)
+        this.$confirm('此操作将永久删除该记录, 是否继续?', '提示', {
+          confirmButtonText: '确定', cancelButtonText: '取消', type: 'warning'
+        }).then(() => {
+          return teacher.removeById(id)
+        }).then((response) => {
+          console.log(response)
+          this.getList()
+          this.$message({
+            type: 'success',
+            message: '删除成功!'
+          })
+        }).catch((response) => { // 失败
+          // console.log(response)
+          if (response === 'cancel') {
+            this.$message({
+              type: 'info',
+              message: '已取消删除'
+            })
+          } else {
+            this.$message({
+              type: 'error',
+              message: '删除失败'
+            })
+          }
+        })
+      },
     },
   };
 </script>
