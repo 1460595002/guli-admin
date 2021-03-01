@@ -7,13 +7,13 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/': {
-                target: 'http://localhost:8001',//后端接口地址
+                target: 'http://localhost:9001',//后端接口地址
                 changeOrigin: true,//是否允许跨越
                 pathRewrite: {
                     '^/': '/',//重写,
                 }
             }
-        },
+        }, 
         host: '192.168.0.104',
         port: 8081,
         autoOpenBrowser: false,
@@ -26,5 +26,5 @@ module.exports = {
         cacheBusting: true,
         cssSourceMap: false,
     },
-
+    OSS_PATH: 'jinronga.oss-cn-qingdao.aliyuncs.com'
 }   
