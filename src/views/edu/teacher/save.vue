@@ -64,6 +64,7 @@
     import teacher from '@/api/edu/teacher'
     import ImageCropper from '@/components/ImageCropper'
     import PanThumb from '@/components/PanThumb'
+
     //引入调用teacher.js文件
     export default {
         components: { ImageCropper, PanThumb },
@@ -80,14 +81,14 @@
                 imagecropperShow: false,//上传弹窗是否显示
                 imagecropperkey: 0,//上传组件key的值 
                 saveBtnDisabled: false, // 保存按钮是否禁用,
-                // 获取地址
-                // BASE_API: process.env.BASE_API,
-                BASE_API: "http://localhost:8002",
+                // 获取地址  
+               // BASE_API: process.env.BASE_API,
+            BASE_API: "http://localhost:9001",
             }
         },
         created() { //页面渲染之前执行 只会执行一次
             this.init();
-
+          console.log(process.env.BASE_API)
         },
         watch: {
             $route(to, form) { //路由变化方式，路由发生变化，方法就会执行
@@ -120,6 +121,7 @@
                     //清空表单
                     this.teacher = {}
                 }
+             
             },
 
             //提交添加教师
@@ -129,6 +131,7 @@
             },
             //添加教师方法
             saveData() {
+                
                 teacher.save(this.teacher).then(response => {
                     return this.$message({
                         type: 'success', message: '保存成功!'

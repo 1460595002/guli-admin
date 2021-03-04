@@ -40,7 +40,7 @@ export const constantRoutes = [
   {
     path: '/404',
     component: () => import('@/views/404'),
-    hidden: true 
+    hidden: true
   },
 
   //首页
@@ -77,6 +77,7 @@ export const constantRoutes = [
       }
     ]
   },
+  //教师信息
   {
     path: '/edu/teacher',
     component: Layout,
@@ -94,14 +95,32 @@ export const constantRoutes = [
         path: 'create',
         name: 'EduTeacherCreate',
         component: () => import('@/views/edu/teacher/save'),
-        meta: { title: '添加讲师' ,icon:'tree' }
+        meta: { title: '添加讲师', icon: 'tree' }
       },
       {
-        path: 'edit/:id', 
-        name: 'EduTeacherEdit', 
+        path: 'edit/:id',
+        name: 'EduTeacherEdit',
         component: () => import('@/views/edu/teacher/save'),
         meta: { title: '编辑讲师', noCache: true },
         hidden: true
+      }
+    ]
+  },
+  //课程分类管理
+  {
+    path: '/edu/subject', component: Layout, redirect: '/edu/subject/list', name: 'Subject', meta: { title: '课程分类管理', icon: 'nested' },
+    children: [
+      {
+        path: 'list',
+        name: 'EduSubjectList',
+        component: () => import('@/views/edu/subject/list'),
+        meta: { title: '课程分类列表' }
+      },
+      {
+        path: 'import',
+        name: 'EduSubjectImport',
+        component: () => import('@/views/edu/subject/import'),
+        meta: { title: '导入课程分类', icon: 'tree'  }
       }
     ]
   },
